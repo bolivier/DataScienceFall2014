@@ -96,7 +96,7 @@ system(&quot;cat .Rprofile&quot;, intern = TRUE)</code></pre>
 <div id="diamonds.ddl" class="section level4">
 <h4>Diamonds.ddl</h4>
 <pre class="r"><code># To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data&quot;)
+setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData&quot;)
 system(&quot;cat Diamonds.ddl&quot;, intern = TRUE)</code></pre>
 <pre><code>##  [1] &quot;DROP TABLE Diamonds;&quot;                                                               
 ##  [2] &quot;&quot;                                                                                   
@@ -118,7 +118,7 @@ system(&quot;cat Diamonds.ddl&quot;, intern = TRUE)</code></pre>
 <div id="first-few-rows-of-diamonds.dml" class="section level4">
 <h4>First few rows of Diamonds.dml</h4>
 <pre class="r"><code># To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data&quot;)
+setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData&quot;)
 system(&quot;head Diamonds.dml&quot;, intern = TRUE)</code></pre>
 <pre><code>##  [1] &quot;insert into diamonds(\&quot;diamond_id\&quot;, \&quot;carat\&quot;,\&quot;cut\&quot;,\&quot;color\&quot;,\&quot;clarity\&quot;,\&quot;depth\&quot;,\&quot;tbl\&quot;,\&quot;price\&quot;,\&quot;x\&quot;,\&quot;y\&quot;,\&quot;z\&quot;) values(1,0.23,'Ideal','E','SI2',61.5,55,NULL,3.95,3.98,2.43);&quot;    
 ##  [2] &quot;insert into diamonds(\&quot;diamond_id\&quot;, \&quot;carat\&quot;,\&quot;cut\&quot;,\&quot;color\&quot;,\&quot;clarity\&quot;,\&quot;depth\&quot;,\&quot;tbl\&quot;,\&quot;price\&quot;,\&quot;x\&quot;,\&quot;y\&quot;,\&quot;z\&quot;) values(2,0.21,'Premium','E','SI1',59.8,61,326,3.89,3.84,2.31);&quot;   
@@ -135,14 +135,14 @@ system(&quot;head Diamonds.dml&quot;, intern = TRUE)</code></pre>
 <h4>Python script to generate synthetic Diamonds data.</h4>
 <pre class="r"><code># To get this to work in your environment, change the following
 # directory/folder path to the path to your project files.
-setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data&quot;)
+setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData&quot;)
 # I can't get this to print out properly so I've commented it out for now.
 # system('cat fakeDiamondsData.py', intern = TRUE)</code></pre>
 </div>
 <div id="diamondsrest.ddl" class="section level4">
 <h4>DiamondsRest.ddl</h4>
 <pre class="r"><code># To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data&quot;)
+setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData&quot;)
 system(&quot;cat DiamondsRest.ddl&quot;, intern = TRUE)</code></pre>
 <pre><code>##  [1] &quot;DROP TABLE Diam_Customer CASCADE CONSTRAINTS ;&quot;                                                                                                
 ##  [2] &quot;&quot;                                                                                                                                              
@@ -196,7 +196,7 @@ system(&quot;cat DiamondsRest.ddl&quot;, intern = TRUE)</code></pre>
 <div id="first-few-rows-of-fakediamondsdata.dml" class="section level4">
 <h4>First few rows of fakeDiamondsData.dml</h4>
 <pre class="r"><code># To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data&quot;)
+setwd(&quot;~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData&quot;)
 system(&quot;head fakeDiamondsData.dml&quot;, intern = TRUE)</code></pre>
 <pre><code>##  [1] &quot;insert into diam_customer(customer_id, name, gender) values(1, 'Jacob', 'm');&quot;    
 ##  [2] &quot;insert into diam_customer(customer_id, name, gender) values(2, 'Mason', 'm');&quot;    
@@ -208,7 +208,7 @@ system(&quot;head fakeDiamondsData.dml&quot;, intern = TRUE)</code></pre>
 ##  [8] &quot;insert into diam_customer(customer_id, name, gender) values(8, 'Michael', 'm');&quot;  
 ##  [9] &quot;insert into diam_customer(customer_id, name, gender) values(9, 'Alexander', 'm');&quot;
 ## [10] &quot;insert into diam_customer(customer_id, name, gender) values(10, 'Aiden', 'm');&quot;</code></pre>
-<pre class="r"><code>source(&quot;../03 Analysis/Diamonds Analysis.R&quot;, echo = TRUE)</code></pre>
+<pre class="r"><code>source(&quot;../03Analysis/DiamondsAnalysis.R&quot;, echo = TRUE)</code></pre>
 <pre><code>## 
 ## &gt; library(&quot;ggplot2&quot;, lib.loc = &quot;/Library/Frameworks/R.framework/Versions/3.0/Resources/library&quot;)
 ## 

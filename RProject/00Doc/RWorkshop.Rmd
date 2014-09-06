@@ -27,7 +27,7 @@ system("cat .Rprofile", intern = TRUE)
 
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
+setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
 system("cat Diamonds.ddl", intern = TRUE)
 ``` 
 
@@ -35,7 +35,7 @@ system("cat Diamonds.ddl", intern = TRUE)
 
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
+setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
 system("head Diamonds.dml", intern = TRUE)
 ``` 
 
@@ -43,7 +43,7 @@ system("head Diamonds.dml", intern = TRUE)
 
 ```{r, tidy=TRUE}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
+setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
 # I can't get this to print out properly so I've commented it out for now.
 #system("cat fakeDiamondsData.py", intern = TRUE)
 ``` 
@@ -52,7 +52,7 @@ setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
 
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
+setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
 system("cat DiamondsRest.ddl", intern = TRUE)
 ``` 
 
@@ -60,10 +60,10 @@ system("cat DiamondsRest.ddl", intern = TRUE)
 
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
-setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02 Diamonds Data")
+setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
 system("head fakeDiamondsData.dml", intern = TRUE)
 ``` 
 
 ```{r}
-source("../03 Analysis/Diamonds Analysis.R", echo = TRUE)
+source("../03Analysis/DiamondsAnalysis.R", echo = TRUE)
 ```
