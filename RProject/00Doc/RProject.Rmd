@@ -36,7 +36,7 @@ system("cat Diamonds.ddl", intern = TRUE)
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
 setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
-system("head Diamonds.dml", intern = TRUE)
+system("head Diamonds.dml.head", intern = TRUE)
 ``` 
 
 ####Python script to generate synthetic Diamonds data.
@@ -61,7 +61,7 @@ system("cat DiamondsRest.ddl", intern = TRUE)
 ```{r}
 # To get this to work in your environment, change the following directory/folder path to the path to your project files.
 setwd("~/Mine/UT/GitRepositories/DataScienceFall2014/RProject/02DiamondsData")
-system("head fakeDiamondsData.dml", intern = TRUE)
+system("head fakeDiamondsData.dml.head", intern = TRUE)
 ``` 
 
 ```{r}
