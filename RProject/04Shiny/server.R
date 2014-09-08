@@ -2,8 +2,8 @@
 
 library(shiny)
 
-library("ggplot2", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
-library("lubridate", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
+library("ggplot2")
+library("lubridate")
 options(java.parameters="-Xmx2g")
 library(rJava)
 library(RJDBC)
