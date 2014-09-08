@@ -12,9 +12,9 @@ shinyUI(pageWithSidebar(
   sidebarPanel(
     sliderInput("obs", 
                 "Number of observations:", 
-                min = 1,
-                max = 1000, 
-                value = 500)
+                min = 2009,
+                max = 2013, 
+                value = 2009)
   ),
 
   # Show a plot of the generated distribution
