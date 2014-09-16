@@ -4,21 +4,33 @@ options(java.parameters="-Xmx2g")
 library(rJava)
 library(RJDBC)
 
-jdbcDriver <- JDBC(driverClass="oracle.jdbc.OracleDriver", classPath="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/ojdbc6.jar")
+jdbcDriver <- JDBC(driverClass="oracle.jdbc.OracleDriver", classPath="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/ojdbc6.jar")
 
 # In the following, use your username and password instead of "CS347_prof", "orcl_prof" once you have an Oracle account
 possibleError <- tryCatch(
-  jdbcConnection <- dbConnect(jdbcDriver, "jdbc:oracle:thin:@128.83.138.158:1521:orcl", "C##cs347_prof", "orcl_prof"),
+  jdbcConnection <- dbConnect(jdbcDriver, "jdbc:oracle:thin:@128.83.138.158:1521:orcl", "C##cs347_nos98", "orcl_nos98"),
 error=function(e) e
 )
 if(!inherits(possibleError, "error")){
-  diamonds <- dbGetQuery(jdbcConnection, "select \"carat\", \"price\", r.name, sales_date from diamonds d, diam_sale s, diam_retailer r where d.\"diamond_id\" = s.diamond_id and s.retailer_id = r.retailer_id")
+  accidents <- dbGetQuery(jdbcConnection, "select * from accident")
   dbDisconnect(jdbcConnection)
 }
-head(diamonds)
-ggplot(data = diamonds) + geom_histogram(aes(x = carat))
-ggplot(data = diamonds) + geom_density(aes(x = carat, fill = "gray50"))
-ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
-ggplot(subset(diamonds, NAME == 'ZALE CORP' | NAME == 'TIFFANY CO'), aes(x = NAME, y = price)) + geom_point()
-ggplot(subset(diamonds, year(SALES_DATE) == "2009"), aes(x = paste(year(SALES_DATE), month(SALES_DATE),sep="-"), y = price)) + geom_point()
+head(accidents)
 
+# It's not the weather that's doing this
+# 1 is clear, 2 is rainy
+ggplot(data = (accidents)) + geom_histogram(aes_string(x = 'WEATHER')) + xlim(0, 8)
+
+# Most accidents happen on weekend, but not as many as we expected.
+ggplot(data = (accidents)) + geom_histogram(aes_string(x = 'DAY_WEEK')) 
+
+# lots of accidents in the early morning (leaving bars), but 
+# more so when people are coming home from work (but not heading to work).
+ggplot(data = (accidents)) + geom_histogram(aes_string(x = 'HOUR')) + xlim(0, 25)
+
+# recordings happen mostly at the 5 minute marks - human error in the data
+ggplot(data = (accidents)) + geom_histogram(aes_string(x = 'MINUTE')) + xlim(0, 60)
+
+
+# People crash waaaaay more on the east coast...there are no people in the midwest
+ggplot(accidents) + geom_point(aes(x=LONGITUD,y=LATITUDE)) + coord_map(project="mercator") + xlim(-130, -60) + ylim(20, 55)
