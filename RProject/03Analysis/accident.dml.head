@@ -1,0 +1,63 @@
+-- accident.csv -- 
+--
+-- SQL code with the contents of dbf file accident.dbf
+
+
+DROP TABLE accident;
+
+CREATE TABLE accident (
+  STATE       numeric(16,0),
+  ST_CASE     numeric(16,0),
+  VE_TOTAL    numeric(16,0),
+  VE_FORMS    numeric(16,0),
+  PVH_INVL    numeric(16,0),
+  PEDS        numeric(16,0),
+  PERNOTMVIT  numeric(16,0),
+  PERMVIT     numeric(16,0),
+  PERSONS     numeric(16,0),
+  COUNTY      numeric(16,0),
+  CITY        numeric(16,0),
+  DAY         numeric(16,0),
+  MONTH       numeric(16,0),
+  YEAR        numeric(16,0),
+  DAY_WEEK    numeric(16,0),
+  HOUR        numeric(16,0),
+  MINUTE      numeric(16,0),
+  NHS         numeric(16,0),
+  ROAD_FNC    numeric(16,0),
+  ROUTE       numeric(16,0),
+  TWAY_ID     varchar(30),
+  TWAY_ID2    varchar(30),
+  MILEPT      numeric(16,0),
+  LATITUDE    numeric(16,8),
+  LONGITUD    numeric(16,8),
+  SP_JUR      numeric(16,0),
+  HARM_EV     numeric(16,0),
+  MAN_COLL    numeric(16,0),
+  RELJCT1     numeric(16,0),
+  RELJCT2     numeric(16,0),
+  TYP_INT     numeric(16,0),
+  WRK_ZONE    numeric(16,0),
+  REL_ROAD    numeric(16,0),
+  LGT_COND    numeric(16,0),
+  WEATHER1    numeric(16,0),
+  WEATHER2    numeric(16,0),
+  WEATHER     numeric(16,0),
+  SCH_BUS     numeric(16,0),
+  RAIL        varchar(7),
+  NOT_HOUR    numeric(16,0),
+  NOT_MIN     numeric(16,0),
+  ARR_HOUR    numeric(16,0),
+  ARR_MIN     numeric(16,0),
+  HOSP_HR     numeric(16,0),
+  HOSP_MN     numeric(16,0),
+  CF1         numeric(16,0),
+  CF2         numeric(16,0),
+  CF3         numeric(16,0),
+  FATALS      numeric(16,0),
+  DRUNK_DR    numeric(16,0)
+);
+
+INSERT INTO accident VALUES (1,10001,1,1,0,0,0,2,2,81,0,1,1,2012,1,20,33,1,2,2,'US-SR 38                      ','                              ',987,32.70131667,-85.52518056,0,1,0,0,1,1,0,3,3,1,0,1,0,'0000000',99,99,20,38,99,99,0,0,0,1,0);
+INSERT INTO accident VALUES (1,10002,2,1,1,0,0,1,1,83,0,1,1,2012,1,13,15,0,16,4,'CR-MAHALO CIRCLE              ','                              ',0,34.74250833,-86.88350556,0,14,0,0,1,1,0,7,1,1,0,1,0,'0000000',99,99,13,45,99,99,0,0,0,1,0);
+INSERT INTO accident VALUES (1,10003,1,1,0,0,0,6,6,105,0,2,1,2012,2,1,35,1,2,3,'SR-5                          ','                              ',558,32.55205278,-87.34776944,0,35,0,0,1,1,0,4,3,1,0,1,0,'0000000',99,99,2,25,99,99,0,0,0,1,0);
